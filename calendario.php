@@ -28,13 +28,13 @@
 		);
 
 		$diasSemana = array(
-			'Domingo',
-			'Segunda',
-			'Terça',
-			'Quarta',
-			'Quinta',
-			'Sexta',
-			'Sabado'
+			'Dom',
+			'Seg',
+			'Ter',
+			'Qua',
+			'Qui',
+			'Sex',
+			'Sab'
 		);
 
 		//cada kay=número refere-se a um mes=valor
@@ -76,12 +76,13 @@
 
 		}
 
-		echo '<a href="#" id="volta">&<a href="#" id="vai">&raquo;</a>';
+		echo '<a href="#" id="volta">&laquo<a href="#" id="vai">&raquo;</a>';
 		echo '<table border="0" width="100%">';
 		//cria o corpo da tabela do mes
 		foreach ($arrayMes as $num => $mes) {
 			echo '<tbody id="mes_'.$num.'"class="mes">'; // id para js
-			echo '<tr><td colspan="7">'.$mes.'</td></tr><tr>';
+			echo '<tr class="mes_title"><td colspan="7">'.$mes.'</td></tr>';
+			echo '<tr class="dias_title">';
 		///////////////////////////////////////////////////////////////
 
 			//imprime os dias da semana
